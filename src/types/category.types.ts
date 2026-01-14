@@ -1,0 +1,12 @@
+// Category types
+export interface Category {
+  id: number;
+  name: string;
+  books_count?: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface CategoryFormData {
+  name: string;
+}
