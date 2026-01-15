@@ -32,6 +32,7 @@ export interface DashboardStats {
 }
 
 export interface AuthLoginResponse {
+  data: any;
   token: string;
   user: import("./user.types").AdminUser;
 }

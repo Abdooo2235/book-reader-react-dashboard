@@ -35,7 +35,14 @@ export const useAuthStore = create<AuthStore>()(
             credentials
           );
 
-          const { token, user } = response.data;
+          // Backend returns { success, message, data: { user, token } }
+          const responseData = response.data;
+          const token = responseData.data?.token || responseData.token;
+          const user = responseData.data?.user || responseData.user;
+
+          if (!user || !token) {
+            throw new Error("Invalid response from server");
+          }
 
           // Check if user is admin
           if (user.role !== "admin") {
