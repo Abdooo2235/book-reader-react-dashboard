@@ -31,12 +31,6 @@ export interface DashboardStats {
   total_categories: number;
 }
 
-export interface AuthLoginResponse {
-  data: any;
-  token: string;
-  user: import("./user.types").AdminUser;
-}
-
 export interface ApiError {
   message: string;
   errors?: Record<string, string[]>;
