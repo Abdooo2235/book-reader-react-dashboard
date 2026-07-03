@@ -103,7 +103,7 @@ export const useAuthStore = create<AuthStore>()(
         set({ isLoading: true });
         try {
           const response = await axiosInstance.get<{ data: AdminUser }>(
-            API_CONFIG.endpoints.auth.me
+            API_CONFIG.endpoints.auth.user
           );
 
           const user = response.data.data;
