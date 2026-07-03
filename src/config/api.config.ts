@@ -4,10 +4,10 @@ export const API_CONFIG = {
     auth: {
       login: "/auth/login",
       logout: "/auth/logout",
-      me: "/auth/me",
+      user: "/auth/user",
     },
     dashboard: {
-      stats: "/admin/dashboard/stats",
+      stats: "/admin/stats",
     },
     books: {
       list: "/admin/books",
